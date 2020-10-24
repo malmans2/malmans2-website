@@ -1,25 +1,30 @@
-name: Build and Deploy
+name: github pages
 
 on:
   push:
     branches:
-      - master
+      - main  # Set a branch name to trigger deployment
 
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - run: snap install --classic go
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.73'
 
-    - name: Hugo Deploy GitHub Pages
-      uses: benmatselby/hugo-deploy-gh-pages@master
-      env:
-        HUGO_VERSION: 0.73.0
-        HUGO_EXTENDED: true
-        TARGET_REPO: malmans2/malmans2.github.io
-        TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-        CNAME: malmans2.github.io
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          external_repository: malmans2/malmans2.github.io
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
+          publish_dir: ./public

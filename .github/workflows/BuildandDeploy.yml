@@ -16,6 +16,9 @@ jobs:
       with:
         submodules: true
 
+    - name: Set up go environment
+      uses: actions/setup-go@v2
+
     - name: Hugo Deploy GitHub Pages
       uses: benmatselby/hugo-deploy-gh-pages@master
       env:

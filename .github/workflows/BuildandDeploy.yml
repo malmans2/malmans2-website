@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install go
+      run: |
+          wget -O go.tar.gz https://golang.org/dl/go1.15.3.linux-amd64.tar.gz
+          tar -C /usr/local -xzf go.tar.gz
+          export PATH=$PATH:/usr/local/go/bin
+    
     - name: Checkout master
       uses: actions/checkout@v2
 

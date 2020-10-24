@@ -13,8 +13,6 @@ jobs:
     steps:
     - name: Checkout master
       uses: actions/checkout@v2
-      with:
-        submodules: 'recursive'
 
     - name: Hugo Deploy GitHub Pages
       uses: benmatselby/hugo-deploy-gh-pages@master

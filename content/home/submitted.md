@@ -1,21 +1,21 @@
 +++
-# A Recent and Upcoming Talks section created with the Pages widget.
-# This section displays recent talks from `content/talk/`.
+# A Recent Publications section created with the Pages widget.
+# This section displays recent blog posts from `content/publication/`.
 
 widget = "pages"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 70  # Order that this section will appear.
+weight = 80  # Order that this section will appear.
 
-title = "Recent & Upcoming Talks"
+title = "Submitted Manuscripts"
 subtitle = ""
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
-  page_type = "talk"
+  page_type = "publication"
   
   # Choose how much pages you would like to display (0 = all pages)
-  count = 5
+  count = 0
   
   # Choose how many pages you would like to offset by
   offset = 0
@@ -30,23 +30,21 @@ subtitle = ""
     publication_type = ""
     author = ""
     exclude_featured = false
-    exclude_past = false
-    exclude_future = false
-    
+  
 [design]
   # Toggle between the various page layout types.
   #   1 = List
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  view = 2
+  view = 1
   
 [design.background]
   # Apply a background color, gradient, or image.
   #   Uncomment (by removing `#`) an option to apply it.
   #   Choose a light or dark text color by setting `text_color_light`.
   #   Any HTML color name or Hex value is valid.
-
+    
   # Background color.
   # color = "navy"
   
@@ -68,3 +66,4 @@ subtitle = ""
  # CSS class.
  css_class = ""
 +++
+

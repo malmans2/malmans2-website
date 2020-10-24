@@ -1,0 +1,18 @@
+# Theme metadata
+name = "noc"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#31b3e3"
+
+# Menu
+menu_primary = "#0b324c"
+menu_text = "rgb(255,255,255)"
+menu_text_active = "#31b3e3"
+menu_title = "#d7e3ea"
+
+# Home sections
+home_section_odd = "#fdfdfd"
+home_section_even = "#f6f9fd"

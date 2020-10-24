@@ -16,13 +16,11 @@ jobs:
       with:
         submodules: 'recursive'
 
-    - name: Set up go environment
-      uses: actions/setup-go@v2
-
     - name: Hugo Deploy GitHub Pages
       uses: benmatselby/hugo-deploy-gh-pages@master
       env:
         HUGO_VERSION: 0.73.0
+        HUGO_EXTENDED: true
         TARGET_REPO: malmans2/malmans2.github.io
         TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         CNAME: malmans2.github.io

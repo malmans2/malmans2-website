@@ -9,9 +9,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up
-        uses: actions/checkout@v2
-        uses: actions/setup-go@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
 
       - name: Install hugo
         run: |
@@ -21,9 +20,6 @@ jobs:
       - name: Clone previus built
         run: |
             git clone https://github.com/malmans2/malmans2.github.io.git public
-            cd public
-            git checkout -b test
-            cd ..
 
       - name: Build
         run: |
@@ -34,6 +30,10 @@ jobs:
         env:
             DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
+            cd public
             git remote set-url --push origin https://malmans2:$DEPLOY_TOKEN@github.com/malmans2/malmans2.github.io
+            git checkout -b test
+            git add .
+            git commit -m "test"
             git push -u origin test
         

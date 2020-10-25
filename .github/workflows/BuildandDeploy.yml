@@ -14,12 +14,15 @@ jobs:
 
       - name: Install hugo
         run: |
-            wget -O hugo_install.deb https://github.com/gohugoio/hugo/releases/download/v0.76.5/hugo_extended_0.76.5_Linux-64bit.deb
+            HUGO_VERSION=$(grep -i HUGO_VERSION netlify.toml | sed 's/ //g' | sed 's/.*=//g' | sed 's/"//g')
+            wget -O hugo_install.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
             sudo dpkg -i hugo_install.deb
       
       - name: Clone previus built
+        env:
+            GITHUB_USER: ${{ github.actor }}
         run: |
-            git clone https://github.com/malmans2/malmans2.github.io.git public
+            git clone https://github.com/${GITHUB_USER}/${GITHUB_USER}.github.io.git public
 
       - name: Build
         run: |
@@ -32,10 +35,9 @@ jobs:
             DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
             cd public
-            git remote set-url --push origin https://malmans2:$DEPLOY_TOKEN@github.com/malmans2/malmans2.github.io
+            git remote set-url --push origin https://${GITHUB_USER}:$DEPLOY_TOKEN@github.com/${GITHUB_USER}/${GITHUB_USER}.github.io
             git config --global user.name $GITHUB_USER
-            git checkout -b test
             git add .
-            git commit -m "test"
-            git push -u origin test
+            git commit -m "Automatic deployment"
+            git push -u origin master
         

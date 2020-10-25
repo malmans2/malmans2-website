@@ -29,6 +29,7 @@ jobs:
       - name: Push
         env:
             DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-        git remote set-url --push origin https://malmans2:$DEPLOY_TOKEN@github.com/malmans2/malmans2.github.io
-        git push -u origin test
+        run: |
+            git remote set-url --push origin https://malmans2:$DEPLOY_TOKEN@github.com/malmans2/malmans2.github.io
+            git push -u origin test
         

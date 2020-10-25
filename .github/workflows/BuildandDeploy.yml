@@ -12,6 +12,8 @@ jobs:
       - name: Set up
         uses: actions/checkout@v2
         uses: actions/setup-go@v2
+
+      - name: Install hugo
         run: |
             wget -O hugo_install.deb https://github.com/gohugoio/hugo/releases/download/v0.76.5/hugo_extended_0.76.5_Linux-64bit.deb
             sudo dpkg -i hugo_install.deb
@@ -24,7 +26,9 @@ jobs:
             cd ..
 
       - name: Build
-        run: hugo
+        run: |
+            hugo
+            cd public
 
       - name: Push
         env:

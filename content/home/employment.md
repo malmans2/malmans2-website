@@ -21,7 +21,7 @@ date_format = "Jan 2006"
   title = "Research Assistant"
   company = "Johns Hopkins University"
   company_url = "https://www.jhu.edu/"
-  location = "Baltimore, US"
+  location = "Baltimore, USA"
   date_start = "2015-09-01"
   date_end = "2020-03-31"
 

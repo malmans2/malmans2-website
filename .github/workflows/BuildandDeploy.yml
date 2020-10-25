@@ -28,10 +28,12 @@ jobs:
 
       - name: Push
         env:
+            GITHUB_USER: ${{ github.actor }}
             DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
             cd public
             git remote set-url --push origin https://malmans2:$DEPLOY_TOKEN@github.com/malmans2/malmans2.github.io
+            git config --global user.name $GITHUB_USER
             git checkout -b test
             git add .
             git commit -m "test"

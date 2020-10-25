@@ -24,10 +24,10 @@ interests:
 education:
   courses:
   - course: PhD in Physical Oceanography
-    institution: Johns Hopkins University, US
+    institution: Johns Hopkins University, USA
     year: 2020
   - course: MA in Earth and Planetary Sciences
-    institution: Johns Hopkins University, US
+    institution: Johns Hopkins University, USA
     year: 2016
   - course: MSc in Marine Sciences
     institution: University of Genoa, Italy

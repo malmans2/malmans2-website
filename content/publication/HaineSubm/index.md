@@ -14,7 +14,7 @@ authors: [
     "Mattia Almansi",
     "Christopher Hill"]
 date: 2020-10-24T19:41:40+01:00
-doi: ""
+doi: "https://doi.org/10.1002/essoar.10504566.1"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2020-10-24T19:41:40+01:00
@@ -46,11 +46,11 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
+url_pdf: "https://www.essoar.org/pdfjs/10.1002/essoar.10504566.1"
+url_code: "https://github.com/hainegroup/Computational-Oceanography-Commentary"
 url_dataset:
 url_poster:
-url_project:
+url_project: "https://poseidon.idies.jhu.edu/"
 url_slides:
 url_source:
 url_video:

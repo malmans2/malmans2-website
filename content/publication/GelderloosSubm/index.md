@@ -39,7 +39,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
+url_pdf: "https://journals.ametsoc.org/downloadpdf/journals/phoc/aop/JPO-D-20-0239.1/JPO-D-20-0239.1.xml"
 url_code:
 url_dataset:
 url_poster:

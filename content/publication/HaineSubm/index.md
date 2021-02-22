@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Computational Oceanography is Coming of Age"
+title: "Is Computational Oceanography Coming of Age?"
 authors: [
     "Thomas W. N. Haine",
     "Renske Gelderloos",
@@ -46,7 +46,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://www.essoar.org/pdfjs/10.1002/essoar.10504566.1"
+url_pdf: "https://www.essoar.org/pdfjs/10.1002/essoar.10504566.2"
 url_code: "https://github.com/hainegroup/Computational-Oceanography-Commentary"
 url_dataset:
 url_poster:

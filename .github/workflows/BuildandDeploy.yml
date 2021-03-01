@@ -26,7 +26,7 @@ jobs:
 
       - name: Build
         run: |
-            hugo
+            hugo --gc --minify -b https://malmans2.github.io/
             cd public
 
       - name: Push

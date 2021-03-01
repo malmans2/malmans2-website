@@ -37,7 +37,7 @@ jobs:
             cd public
             git remote set-url --push origin https://${GITHUB_USER}:$DEPLOY_TOKEN@github.com/${GITHUB_USER}/${GITHUB_USER}.github.io
             git config --global user.name $GITHUB_USER
-            git add .
+            git add -A
             git commit -m "Automatic deployment"
             git push -u origin master
         

@@ -16,3 +16,7 @@ menu_title = "#d7e3ea"
 # Home sections
 home_section_odd = "#fdfdfd"
 home_section_even = "#f6f9fd"
+
+[dark]
+  link = "#bbdefb"
+  link_hover = "#bbdefb"
